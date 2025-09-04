@@ -71,10 +71,3 @@ The Insurance Dashboard enabled clear visibility into customer demographics and 
 * **Author**: Ankita Basu
 * **LinkedIn**: www.linkedin.com/in/ankita-basu-a7b0b628b
 * **Email**: ankita16basu@gmail.com
-
----
-
-✨ This version is polished and recruiter-friendly.
-
-Do you want me to also **create the folder structure suggestion** (like `data/`, `dashboard/`, `images/`) for this repo so you can directly upload?
-
