@@ -2,7 +2,7 @@
 
 # INSURANCE RISK & CLAIMS ANALYSIS
 
-## Brief One Line Summary
+## Summary
 
 Power BI dashboard analyzing **37,542** auto insurance policies and **\$187.8M** in claim amounts to understand risk and customer segments.
 
