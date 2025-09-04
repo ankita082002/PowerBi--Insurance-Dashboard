@@ -1,72 +1,87 @@
 # PowerBi--Insurance-Dashboard
-Insurance Data Analysis Dashboard
-🏦 Insurance Data Analysis Dashboard
 
-🔹 Summary
-Developed an interactive dashboard to analyze insurance policy trends, customer demographics, and claim patterns for data-driven decision-making.
+# INSURANCE RISK & CLAIMS ANALYSIS
 
- 🔍 Overview
-This project focuses on analyzing insurance data to uncover patterns in policy distribution, claims, and customer segments. The goal was to create an interactive dashboard that provides stakeholders with actionable insights into business performance, customer behavior, and potential areas for cost optimization.
+## Brief One Line Summary
 
-❓ Problem Statement
-Insurance companies deal with massive amounts of policy and claims data. Without proper analysis, it is difficult to:
-* Identify which customer segments contribute the most revenue
-* Monitor claims frequency and fraud risk
-* Optimize policy offerings and pricing strategies
+Power BI dashboard analyzing **37,542** auto insurance policies and **\$187.8M** in claim amounts to understand risk and customer segments.
 
-This project aims to solve these problems by building a structured dashboard for data exploration and decision support.
-📂 Dataset
+## Overview
 
-* Size & Features:
+An interactive Power BI report to monitor policy mix, claim behavior, and demographics. It surfaces KPIs, trends by vehicle and customer attributes, and a claims matrix by education and marital status.
 
-  * \~10,000+ records
-  * Key columns: `Customer_ID`, `Age`, `Gender`, `Region`, `Policy_Type`, `Premium`, `Claims`, `Claim_Amount`, `Policy_Term`
+## Problem Statement
 
- 🛠️ Tools and Technologies
+Decision makers need a single view to:
 
-* **Data Cleaning & Analysis**: Excel
-* **Visualization**: Power BI 
+* Track overall volume and claims
+* See which segments (car use, make, zone, age, education) drive policies and claim amounts
+* Compare claim amounts across marital and education groups
 
-🧩 Methods
-1. **Data Cleaning** – handled missing values, removed duplicates, standardized formats
-2. **Exploratory Data Analysis (EDA)** – analyzed customer demographics, policy types, claims distribution
-3. **Feature Engineering** – created new fields like claim ratio, premium per year
-4. **Dashboard Development** – built interactive charts for:
+## Dataset
 
-   * Premium contribution by policy type
-   * Claims by age group and gender
-   * Regional distribution of policies
-   * Loss ratio trends
+* **Type**: Auto insurance policies & claims (sample dataset)
+* **Rows**: 37,542 policies
+* **Key fields used**: `Gender`, `CarUse`, `CarMake`, `CoverageZone`, `AgeGroup`, `CarYear`, `KidsDriving`, `Education`, `MaritalStatus`, `ClaimAmount`, `ClaimFrequency`, `PolicyID`
 
-🔑 Key Insights
-* Health policies generated the highest premium revenue (40%) but also had the highest claim ratio.
-* Customers aged **30–45** had the maximum claim frequency.
-* Region **South-East** contributed 35% of total premiums, showing strong market concentration.
-* Female customers had slightly higher average claim amounts than male customers.
+## Tools and Technologies
 
- 📊 Dashboard / Model / Output
+* **Power BI Desktop**
+* **DAX** for measures and calculated fields
+* **Excel** as source file
 
-* Filters for age, gender, region, and policy type
-* KPIs: Total Premiums, Claims Paid, Loss Ratio, Customer Segments
+## Methods
 
- ⚙️ How to Run this Project?
+* Data cleaning (remove duplicates, standardize categories)
+* **Measures**: Total Policies, Total Claim Amount, Average Claim Frequency, Average Claim Amount
+* Visuals:
 
-1. Clone this repository
-2. Download the Power BI file (`Insurance_Dashboard.pbix`)
-3. Open in **Power BI Desktop**
-4. Connect dataset (CSV/SQL) if required and refresh
+  * Donuts/Bars: Policies by **Car Use**, **Car Make**, **Coverage Zone**
+  * Column chart: Policies by **Age Group**
+  * Line chart: Policies by **Car Year** (1990–2020)
+  * Histogram: Policies by **Kids Driving**
+  * Pie: Policies by **Education**
+  * Matrix: **Claim Amount by Education × Marital Status**
+* Slicer: **Select measures** (e.g., Total Policies, Total Claim Amount)
 
-📌 Results & Conclusion
+## Key Insights
 
-The Insurance Dashboard enabled clear visibility into customer demographics and claims. It highlighted revenue-contributing segments and high-risk categories, allowing insurance managers to make data-backed decisions on pricing, fraud detection, and targeted marketing.
+* **KPIs**: 37,542 policies • **\$187.8M** total claim amount • Avg claim freq **0.5** • Avg claim amount **\$5.0K**
+* **Gender split**: Male **18.7K**, Female **18.8K** (balanced).
+* **Car use**: Predominantly **Private (\~30K)** vs **Commercial (\~7K)**.
+* **Top car makes by policies**: **Ford (\~3.3K)**, **Chevrolet (\~3.0K)**, then **Dodge/Toyota/GMC (\~1.8K)**.
+* **Coverage zone**: Segments around \~20% each (Urban, Rural, Highly Urban, Suburban, Highly Rural).
+* **Age groups**: Peaks around **36–65 (\~7.0–7.1K)**; lowest **15–25 (\~4.2K)**, **66–75 (\~5.1K)**.
+* **Car year trend**: Growth through 2000s with peaks in early–mid 2010s.
+* **Kids driving**: Majority have **0** (≈27K), tails at 1–3.
+* **Claim Amount by Education × Marital** (totals):
 
-🚀 Future Work
+  * **Divorced \$26.4M**, **Married \$50.6M**, **Separated \$14.5M**, **Single \$96.3M**.
+  * Among Singles, **Bachelors \$38.7M** and **High School \$40.2M** dominate.
 
-* Add predictive modeling for **claim probability**
-* Build churn analysis to identify customers likely to switch providers
-* Deploy dashboard as a **web app** using Power BI Service / Streamlit
+## Dashboard
 
- 👩‍💻 Author & Contact
+* **Power BI file**: `Insurance_Risk_Claims.pbix`
+
+## How to Run this project?
+
+1. Clone the repo.
+2. Open `Insurance_Risk_Claims.pbix` in **Power BI Desktop**.
+3. If prompted, update data source paths for the CSV/Excel files in **Transform Data → Data source settings**.
+4. Click **Refresh** to load data.
+5. Use the **Select measures** slicer to switch the metric across visuals.
+
+## Results & Conclusion
+
+The dashboard highlights a private-use, mid-age, education-skewed portfolio with concentrated claim amounts among **Single** customers—especially **Bachelors** and **High School**—and reveals brand/zone segments for targeted action.
+
+## Future Work
+
+* Add **loss ratio** and **severity/frequency** per segment
+* Create **alerts** for unusual spikes by car make/zone
+* Add **drill-through** pages for claim details and policy cohorts
+
+## Author & Contact
 
 * **Author**: Ankita Basu
 * **LinkedIn**: www.linkedin.com/in/ankita-basu-a7b0b628b
